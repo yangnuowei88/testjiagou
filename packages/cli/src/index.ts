@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import chalk from 'chalk';
+// @ts-ignore
 import { Input, Select } from 'enquirer';
 import execa from 'execa';
 import * as fs from 'fs-extra';
