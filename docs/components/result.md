@@ -7,7 +7,7 @@
 按需加载引用方式：
 
 ```javascript
-import { Result } from '@sinokit/components';
+import { Result } from '@sddz/components';
 
 export default {
   components: {

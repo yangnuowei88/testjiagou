@@ -6,7 +6,7 @@ const resolve = dir => path.join(__dirname, dir);
 
 const setChainWebpack = config => {
   config.resolve.alias.set('@', path.resolve('app'));
-  config.resolve.alias.set('@sinokit', path.resolve('packages'));
+  config.resolve.alias.set('@sddz', path.resolve('packages'));
   config.module
     .rule('js')
     .include.add('/app')

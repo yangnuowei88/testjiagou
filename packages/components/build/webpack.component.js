@@ -22,7 +22,7 @@ const webpackConfig = {
   externals: {
     vue: config.vue,
     ...config.packagesExternals,
-    '@sinokit/utils': '@sinokit/utils'
+    '@sddz/utils': '@sddz/utils'
   },
   performance: {
     hints: false

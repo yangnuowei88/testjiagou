@@ -7,7 +7,7 @@
 按需加载引用方式：
 
 ```javascript
-import { NumberInfo } from '@sinokit/components';
+import { NumberInfo } from '@sddz/components';
 
 export default {
   components: {

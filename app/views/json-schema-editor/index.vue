@@ -25,7 +25,7 @@
 </template>
 <script>
 import cloneDeep from 'lodash/cloneDeep'
-import { warningToast } from '@sinokit/utils/dist/vue/toast'
+import { warningToast } from '@sddz/utils/dist/vue/toast'
 export default {
   name: 'BasicDialog',
   props: {},

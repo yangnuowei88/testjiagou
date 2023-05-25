@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["app/*"],
-      "@sinokit/*": ["packages/*"]
+      "@sddz/*": ["packages/*"]
     }
   },
   "exclude": ["node_modules", "docs", "public"]

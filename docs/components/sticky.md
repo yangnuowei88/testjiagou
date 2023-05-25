@@ -7,7 +7,7 @@
 按需加载引用方式：
 
 ```javascript
-import { Sticky } from '@sinokit/components';
+import { Sticky } from '@sddz/components';
 
 export default {
   components: {

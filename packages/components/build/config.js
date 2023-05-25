@@ -6,8 +6,8 @@ var externals = {};
 
 Object.keys(Components).forEach(function(key) {
   externals[
-    `@sinokit/components/lib/${key}`
-  ] = `@sinokit/components/dist/${key}`;
+    `@sddz/components/lib/${key}`
+  ] = `@sddz/components/dist/${key}`;
 });
 
 externals = [
@@ -20,14 +20,14 @@ externals = [
   nodeExternals()
 ];
 exports.packagesExternals = {
-  '@sinokit/uitls': '@sinokit/uitls'
+  '@sddz/uitls': '@sddz/uitls'
 };
 exports.externals = externals;
 
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../lib'),
-  '@sinokit/components': path.resolve(__dirname, '../')
+  '@sddz/components': path.resolve(__dirname, '../')
 };
 
 exports.vue = {

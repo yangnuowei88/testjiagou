@@ -83,7 +83,7 @@ Vue.use(JsonSchemaEditor);
 </template>
 <script>
   // demo解释器无法兼容 import
-  // import { warningToast, deepClone } from '@sinokit/utils';
+  // import { warningToast, deepClone } from '@sddz/utils';
   export default {
     data() {
       return {

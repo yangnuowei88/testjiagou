@@ -7,7 +7,7 @@
 按需加载引用方式：
 
 ```javascript
-import { CountDown } from '@sinokit/components';
+import { CountDown } from '@sddz/components';
 
 export default {
   components: {

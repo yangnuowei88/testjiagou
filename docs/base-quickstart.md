@@ -6,9 +6,9 @@
 
 `SinoKit` 有以下几种模块：
 
-- `@sinokit/cli` 命令行工工具
-- `@sinokit/components` 组件库，含基础通用组件&业务组件
-- `@sinokit/utils` 工具包
+- `@sddz/cli` 命令行工工具
+- `@sddz/components` 组件库，含基础通用组件&业务组件
+- `@sddz/utils` 工具包
 
 ## Materials 物料
 

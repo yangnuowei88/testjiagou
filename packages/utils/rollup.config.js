@@ -56,7 +56,7 @@ const baseConfig = [
       {
         file: pkg.unpkg,
         format: 'umd',
-        name: '@sinokit/utils',
+        name: '@sddz/utils',
         ...resolutions
       },
       {

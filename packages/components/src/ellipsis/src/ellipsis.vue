@@ -16,7 +16,7 @@
 import {
   cutStrByFullLength,
   getStrFullLength,
-} from '@sinokit/utils/dist/string-util'
+} from '@sddz/utils/dist/string-util'
 
 export default {
   name: 'SEllipsis',

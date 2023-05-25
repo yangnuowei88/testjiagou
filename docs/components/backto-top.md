@@ -7,7 +7,7 @@
 按需加载引用方式：
 
 ```javascript
-import { BackToTop } from '@sinokit/components';
+import { BackToTop } from '@sddz/components';
 
 export default {
   components: {

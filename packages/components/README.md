@@ -1,13 +1,13 @@
-# @sinokit/components
+# @sddz/components
 
-![NPM version](https://img.shields.io/npm/v/@sinokit/components.svg?style=flat-square)
+![NPM version](https://img.shields.io/npm/v/@sddz/components.svg?style=flat-square)
 
 Sinokit 组件
 
 ## Usage
 
 ```js
-import SinokitComponents from '@sinokit/components';
+import SinokitComponents from '@sddz/components';
 
 Vue.use(SinokitComponents);
 ```

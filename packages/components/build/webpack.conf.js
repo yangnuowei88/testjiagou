@@ -27,7 +27,7 @@ module.exports = {
   },
   externals: {
     vue: config.vue,
-    '@sinokit/utils': '@sinokit/utils'
+    '@sddz/utils': '@sddz/utils'
   },
   optimization: {
     minimizer: [
