@@ -24,6 +24,7 @@ import logError from './utils/logError';
 import * as Messages from './utils/messages';
 const pkg = require('../package.json');
 const prog = sade('sino');
+console.log(11111)
 
 prog
   .version(pkg.version)

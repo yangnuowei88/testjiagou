@@ -1,7 +1,7 @@
 {
   "name": "@sinokit/cli",
   "author": "giscafer",
-  "version": "0.3.2",
+  "version": "0.3.6",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/cli.esm.js",
@@ -25,7 +25,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
     }
   },
   "prettier": {

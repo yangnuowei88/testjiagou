@@ -1,26 +1,22 @@
-import { _ as _typeof } from '../_rollupPluginBabelHelpers-e1b33a40.js';
+/* eslint-disable no-useless-escape */
+const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
+const MOZ_HACK_REGEXP = /^moz([A-Z])/;
+const ieVersion = Number(document.documentMode);
 
-var SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
-var MOZ_HACK_REGEXP = /^moz([A-Z])/;
-var ieVersion = Number(document.documentMode);
 /* istanbul ignore next */
-
-var trim = function trim(string) {
+const trim = function (string) {
   return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
 };
 /* istanbul ignore next */
-
-
-var camelCase = function camelCase(name) {
+const camelCase = function (name) {
   return name.replace(SPECIAL_CHARS_REGEXP, function (_, separator, letter, offset) {
     return offset ? letter.toUpperCase() : letter;
   }).replace(MOZ_HACK_REGEXP, 'Moz$1');
 };
+
 /* istanbul ignore next */
-
-
-var on = function () {
-  if ( document.addEventListener) {
+const on = function () {
+  if (document.addEventListener) {
     return function (element, event, handler) {
       if (element && event && handler) {
         element.addEventListener(event, handler, false);
@@ -34,10 +30,10 @@ var on = function () {
     };
   }
 }();
-/* istanbul ignore next */
 
-var off = function () {
-  if ( document.removeEventListener) {
+/* istanbul ignore next */
+const off = function () {
+  if (document.removeEventListener) {
     return function (element, event, handler) {
       if (element && event) {
         element.removeEventListener(event, handler, false);
@@ -51,85 +47,74 @@ var off = function () {
     };
   }
 }();
-/* istanbul ignore next */
 
-var once = function once(el, event, fn) {
-  var listener = function listener() {
+/* istanbul ignore next */
+const once = function (el, event, fn) {
+  var listener = function () {
     if (fn) {
       fn.apply(this, arguments);
     }
-
     off(el, event, listener);
   };
-
   on(el, event, listener);
 };
-/* istanbul ignore next */
 
+/* istanbul ignore next */
 function hasClass(el, cls) {
   if (!el || !cls) return false;
   if (cls.indexOf(' ') !== -1) throw new Error('className should not contain space.');
-
   if (el.classList) {
     return el.classList.contains(cls);
   } else {
     return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
   }
 }
-/* istanbul ignore next */
 
+/* istanbul ignore next */
 function addClass(el, cls) {
   if (!el) return;
   var curClass = el.className;
   var classes = (cls || '').split(' ');
-
   for (var i = 0, j = classes.length; i < j; i++) {
     var clsName = classes[i];
     if (!clsName) continue;
-
     if (el.classList) {
       el.classList.add(clsName);
     } else if (!hasClass(el, clsName)) {
       curClass += ' ' + clsName;
     }
   }
-
   if (!el.classList) {
     el.className = curClass;
   }
 }
-/* istanbul ignore next */
 
+/* istanbul ignore next */
 function removeClass(el, cls) {
   if (!el || !cls) return;
   var classes = cls.split(' ');
   var curClass = ' ' + el.className + ' ';
-
   for (var i = 0, j = classes.length; i < j; i++) {
     var clsName = classes[i];
     if (!clsName) continue;
-
     if (el.classList) {
       el.classList.remove(clsName);
     } else if (hasClass(el, clsName)) {
       curClass = curClass.replace(' ' + clsName + ' ', ' ');
     }
   }
-
   if (!el.classList) {
     el.className = trim(curClass);
   }
 }
-/* istanbul ignore next */
 
-var getStyle = ieVersion < 9 ? function (element, styleName) {
+/* istanbul ignore next */
+const getStyle = ieVersion < 9 ? function (element, styleName) {
   if (!element || !styleName) return null;
   styleName = camelCase(styleName);
-
   if (styleName === 'float') {
     styleName = 'styleFloat';
   }
-
   try {
     switch (styleName) {
       case 'opacity':
@@ -138,7 +123,6 @@ var getStyle = ieVersion < 9 ? function (element, styleName) {
         } catch (e) {
           return 1.0;
         }
-
       default:
         return element.style[styleName] || element.currentStyle ? element.currentStyle[styleName] : null;
     }
@@ -148,11 +132,9 @@ var getStyle = ieVersion < 9 ? function (element, styleName) {
 } : function (element, styleName) {
   if (!element || !styleName) return null;
   styleName = camelCase(styleName);
-
   if (styleName === 'float') {
     styleName = 'cssFloat';
   }
-
   try {
     var computed = document.defaultView.getComputedStyle(element, '');
     return element.style[styleName] || computed ? computed[styleName] : null;
@@ -160,12 +142,11 @@ var getStyle = ieVersion < 9 ? function (element, styleName) {
     return element.style[styleName];
   }
 };
-/* istanbul ignore next */
 
+/* istanbul ignore next */
 function setStyle(element, styleName, value) {
   if (!element || !styleName) return;
-
-  if (_typeof(styleName) === 'object') {
+  if (typeof styleName === 'object') {
     for (var prop in styleName) {
       // eslint-disable-next-line no-prototype-builtins
       if (styleName.hasOwnProperty(prop)) {
@@ -174,7 +155,6 @@ function setStyle(element, styleName, value) {
     }
   } else {
     styleName = camelCase(styleName);
-
     if (styleName === 'opacity' && ieVersion < 9) {
       element.style.filter = isNaN(value) ? '' : 'alpha(opacity=' + value * 100 + ')';
     } else {
@@ -182,33 +162,28 @@ function setStyle(element, styleName, value) {
     }
   }
 }
-var isScroll = function isScroll(el, vertical) {
-  var determinedDirection = vertical !== null || vertical !== undefined;
-  var overflow = determinedDirection ? vertical ? getStyle(el, 'overflow-y') : getStyle(el, 'overflow-x') : getStyle(el, 'overflow');
+const isScroll = (el, vertical) => {
+  const determinedDirection = vertical !== null || vertical !== undefined;
+  const overflow = determinedDirection ? vertical ? getStyle(el, 'overflow-y') : getStyle(el, 'overflow-x') : getStyle(el, 'overflow');
   return overflow.match(/(scroll|auto)/);
 };
-var getScrollContainer = function getScrollContainer(el, vertical) {
-  var parent = el;
-
+const getScrollContainer = (el, vertical) => {
+  let parent = el;
   while (parent) {
     if ([window, document, document.documentElement].includes(parent)) {
       return window;
     }
-
     if (isScroll(parent, vertical)) {
       return parent;
     }
-
     parent = parent.parentNode;
   }
-
   return parent;
 };
-var isInContainer = function isInContainer(el, container) {
-  if ( !el || !container) return false;
-  var elRect = el.getBoundingClientRect();
-  var containerRect;
-
+const isInContainer = (el, container) => {
+  if (!el || !container) return false;
+  const elRect = el.getBoundingClientRect();
+  let containerRect;
   if ([window, document, document.documentElement, null, undefined].includes(container)) {
     containerRect = {
       top: 0,
@@ -219,7 +194,6 @@ var isInContainer = function isInContainer(el, container) {
   } else {
     containerRect = container.getBoundingClientRect();
   }
-
   return elRect.top < containerRect.bottom && elRect.bottom > containerRect.top && elRect.right > containerRect.left && elRect.left < containerRect.right;
 };
 

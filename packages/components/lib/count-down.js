@@ -107,20 +107,19 @@ return /******/ (function(modules) { // webpackBootstrap
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -140,7 +139,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -166,11 +166,11 @@ function normalizeComponent (
   } else if (injectStyles) {
     hook = shadowMode
       ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -181,16 +181,14 @@ function normalizeComponent (
       options._injectStyles = hook
       // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -210,32 +208,24 @@ function normalizeComponent (
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/count-down/src/count-down.vue?vue&type=template&id=f64d171e&
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/count-down/src/count-down.vue?vue&type=template&id=f4da3aea&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c
   return _c("span", [
-    _vm._v("\n  " + _vm._s(_vm._f("format")(_vm.lastTime)) + "\n")
+    _vm._v("\n  " + _vm._s(_vm._f("format")(_vm.lastTime)) + "\n"),
   ])
 }
 var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./src/count-down/src/count-down.vue?vue&type=template&id=f64d171e&
+// CONCATENATED MODULE: ./src/count-down/src/count-down.vue?vue&type=template&id=f4da3aea&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/count-down/src/count-down.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
 function fixedZero(val) {
   return val * 1 < 10 ? `0${val}` : val;
 }
-
 /* harmony default export */ var count_downvue_type_script_lang_js_ = ({
   name: 'SCountDown',
   props: {
@@ -252,7 +242,6 @@ function fixedZero(val) {
       default: () => ({})
     }
   },
-
   data() {
     return {
       dateTime: '0',
@@ -262,7 +251,6 @@ function fixedZero(val) {
       interval: 1000
     };
   },
-
   filters: {
     format(time) {
       const hours = 60 * 60 * 1000;
@@ -272,20 +260,16 @@ function fixedZero(val) {
       const s = Math.floor((time - h * hours - m * minutes) / 1000);
       return `${fixedZero(h)}:${fixedZero(m)}:${fixedZero(s)}`;
     }
-
   },
-
   created() {
     this.initTime();
     this.tick();
   },
-
   methods: {
     initTime() {
       let lastTime = 0;
       let targetTime = 0;
       this.originTargetTime = this.target;
-
       try {
         if (Object.prototype.toString.call(this.target) === '[object Date]') {
           targetTime = this.target;
@@ -295,11 +279,9 @@ function fixedZero(val) {
       } catch (e) {
         throw new Error('invalid target prop');
       }
-
       lastTime = targetTime - new Date().getTime();
       this.lastTime = lastTime < 0 ? 0 : lastTime;
     },
-
     tick() {
       const {
         onEnd
@@ -308,7 +290,6 @@ function fixedZero(val) {
         if (this.lastTime < this.interval) {
           clearTimeout(this.timer);
           this.lastTime = 0;
-
           if (typeof onEnd === 'function') {
             onEnd();
           }
@@ -318,19 +299,15 @@ function fixedZero(val) {
         }
       }, this.interval);
     }
-
   },
-
   beforeUpdate() {
     if (this.originTargetTime !== this.target) {
       this.initTime();
     }
   },
-
   beforeDestroy() {
     clearTimeout(this.timer);
   }
-
 });
 // CONCATENATED MODULE: ./src/count-down/src/count-down.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_count_downvue_type_script_lang_js_ = (count_downvue_type_script_lang_js_); 
@@ -356,9 +333,6 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/count-down/src/count-down.vue"
 /* harmony default export */ var count_down = (component.exports);
 // CONCATENATED MODULE: ./src/count-down/index.js
 

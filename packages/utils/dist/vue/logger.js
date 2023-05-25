@@ -3,4 +3,4 @@ import 'vue';
 function logger() {
 }
 
-export default logger;
+export { logger as default };

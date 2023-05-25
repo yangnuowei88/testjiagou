@@ -107,20 +107,19 @@ return /******/ (function(modules) { // webpackBootstrap
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -140,7 +139,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -166,11 +166,11 @@ function normalizeComponent (
   } else if (injectStyles) {
     hook = shadowMode
       ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -181,16 +181,14 @@ function normalizeComponent (
       options._injectStyles = hook
       // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -210,11 +208,10 @@ function normalizeComponent (
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=3f5b5211&
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=348b1bf4&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c
   return _c(
     "div",
     [
@@ -223,11 +220,11 @@ var render = function() {
             _c("div", {
               attrs: { slot: "content" },
               domProps: { textContent: _vm._s(_vm.str) },
-              slot: "content"
+              slot: "content",
             }),
-            _c("span", [_vm._v("\n      " + _vm._s(_vm.getText()) + "\n    ")])
+            _c("span", [_vm._v("\n      " + _vm._s(_vm.getText()) + "\n    ")]),
           ])
-        : _c("span", [_vm._v("\n    " + _vm._s(_vm.getText()) + "\n  ")])
+        : _c("span", [_vm._v("\n    " + _vm._s(_vm.getText()) + "\n  ")]),
     ],
     1
   )
@@ -236,48 +233,43 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=3f5b5211&
+// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=348b1bf4&
 
 // CONCATENATED MODULE: ../utils/dist/string-util.js
 /**
  * 获取字符串长度，英文字符 长度1，中文字符长度2
  * @param {*} str
  */
-var getStrFullLength = function getStrFullLength() {
-  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  return str.split('').reduce(function (pre, cur) {
-    var charCode = cur.charCodeAt(0);
-
+const getStrFullLength = function () {
+  let str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  return str.split('').reduce((pre, cur) => {
+    const charCode = cur.charCodeAt(0);
     if (charCode >= 0 && charCode <= 128) {
       return pre + 1;
     }
-
     return pre + 2;
   }, 0);
 };
+
 /**
  * 截取字符串，根据 maxLength 截取后返回
  * @param {*} str
  * @param {*} maxLength
  */
-
-var cutStrByFullLength = function cutStrByFullLength() {
-  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  var maxLength = arguments.length > 1 ? arguments[1] : undefined;
-  var showLength = 0;
-  return str.split('').reduce(function (pre, cur) {
-    var charCode = cur.charCodeAt(0);
-
+const cutStrByFullLength = function () {
+  let str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  let maxLength = arguments.length > 1 ? arguments[1] : undefined;
+  let showLength = 0;
+  return str.split('').reduce((pre, cur) => {
+    const charCode = cur.charCodeAt(0);
     if (charCode >= 0 && charCode <= 128) {
       showLength += 1;
     } else {
       showLength += 2;
     }
-
     if (showLength <= maxLength) {
       return pre + cur;
     }
-
     return pre;
   }, '');
 };
@@ -285,20 +277,6 @@ var cutStrByFullLength = function cutStrByFullLength() {
 
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ var ellipsisvue_type_script_lang_js_ = ({
   name: 'SEllipsis',
@@ -323,36 +301,29 @@ var cutStrByFullLength = function cutStrByFullLength() {
       default: false
     }
   },
-
   data() {
     if (!this.str) {
       this.str = this.$slots.default.map(vNode => vNode.text).join('');
     }
-
     return {
       str: this.str
     };
   },
-
   computed: {
     fullLength() {
       const fullLength = getStrFullLength(this.str);
       console.log(this.str, fullLength);
       return fullLength;
     }
-
   },
-
   mounted() {
     // this.str = this.$slots.default.map((vNode) => vNode.text).join('')
     console.log(this.tooltip && this.fullLength > length);
   },
-
   methods: {
     getText() {
       return cutStrByFullLength(this.str, this.length) + (this.fullLength > this.length ? '...' : '');
     }
-
   }
 });
 // CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=script&lang=js&
@@ -379,9 +350,6 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/ellipsis/src/ellipsis.vue"
 /* harmony default export */ var ellipsis = (component.exports);
 // CONCATENATED MODULE: ./src/ellipsis/index.js
 

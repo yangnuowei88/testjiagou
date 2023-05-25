@@ -107,20 +107,19 @@ return /******/ (function(modules) { // webpackBootstrap
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -140,7 +139,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -166,11 +166,11 @@ function normalizeComponent (
   } else if (injectStyles) {
     hook = shadowMode
       ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -181,16 +181,14 @@ function normalizeComponent (
       options._injectStyles = hook
       // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -210,11 +208,10 @@ function normalizeComponent (
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/sticky/src/sticky.vue?vue&type=template&id=4faece5e&
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/sticky/src/sticky.vue?vue&type=template&id=73dbb100&
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c
   return _c(
     "div",
     { style: { height: _vm.height + "px", zIndex: _vm.zIndex } },
@@ -228,12 +225,16 @@ var render = function() {
             zIndex: _vm.zIndex,
             position: _vm.position,
             width: _vm.width,
-            height: _vm.height + "px"
-          }
+            height: _vm.height + "px",
+          },
         },
-        [_vm._t("default", [_c("div", [_vm._v("sticky")])])],
+        [
+          _vm._t("default", function () {
+            return [_c("div", [_vm._v("sticky")])]
+          }),
+        ],
         2
-      )
+      ),
     ]
   )
 }
@@ -241,28 +242,9 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./src/sticky/src/sticky.vue?vue&type=template&id=4faece5e&
+// CONCATENATED MODULE: ./src/sticky/src/sticky.vue?vue&type=template&id=73dbb100&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/sticky/src/sticky.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ var stickyvue_type_script_lang_js_ = ({
   name: 'SSticky',
   props: {
@@ -284,7 +266,6 @@ render._withStripped = true
       default: ''
     }
   },
-
   data() {
     this.appendToEl = window;
     return {
@@ -295,73 +276,58 @@ render._withStripped = true
       isSticky: false
     };
   },
-
   mounted() {
     this.height = this.$el.getBoundingClientRect().height;
-
     if (this.appendTo) {
       this.appendToEl = document.querySelector(this.appendTo);
     }
-
     this.appendToEl.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
   },
-
   activated() {
     this.handleScroll();
   },
-
   destroyed() {
     this.appendToEl.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
   },
-
   methods: {
     sticky() {
       if (this.active) {
         return;
       }
-
       this.position = 'fixed';
       this.active = true;
       this.width = this.width + 'px';
       this.isSticky = true;
     },
-
     handleReset() {
       if (!this.active) {
         return;
       }
-
       this.reset();
     },
-
     reset() {
       this.position = '';
       this.width = 'auto';
       this.active = false;
       this.isSticky = false;
     },
-
     handleScroll() {
       const width = this.$el.getBoundingClientRect().width;
       this.width = width || 'auto';
       const offsetTop = this.$el.getBoundingClientRect().top;
-
       if (offsetTop < this.stickyTop) {
         this.sticky();
         return;
       }
-
       this.handleReset();
     },
-
     handleResize() {
       if (this.isSticky) {
         this.width = this.$el.getBoundingClientRect().width + 'px';
       }
     }
-
   }
 });
 // CONCATENATED MODULE: ./src/sticky/src/sticky.vue?vue&type=script&lang=js&
@@ -388,18 +354,14 @@ var component = Object(componentNormalizer["a" /* default */])(
   
 )
 
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/sticky/src/sticky.vue"
 /* harmony default export */ var sticky = (component.exports);
 // CONCATENATED MODULE: ./src/sticky/index.js
 
-/* istanbul ignore next */
 
+/* istanbul ignore next */
 sticky.install = function (Vue) {
   Vue.component(sticky.name, sticky);
 };
-
 /* harmony default export */ var src_sticky = __webpack_exports__["default"] = (sticky);
 
 /***/ })
