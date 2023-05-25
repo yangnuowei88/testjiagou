@@ -14033,7 +14033,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 /* harmony default export */ var src = __webpack_exports__["default"] = ({
-  version: '0.3.13',
+  version: '0.3.16',
   install,
   JsonEditor: src_json_editor,
   OverviewTimeline: overview_timeline["a" /* default */],
