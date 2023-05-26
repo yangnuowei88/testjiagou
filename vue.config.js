@@ -57,7 +57,7 @@ module.exports = {
       entry: resolve('src/main.js')
     }
   },
-  lintOnSave: true,
+  lintOnSave: false,
   productionSourceMap: false,
   chainWebpack: config => setChainWebpack(config),
   configureWebpack: config => setConfigureWebpack(config),

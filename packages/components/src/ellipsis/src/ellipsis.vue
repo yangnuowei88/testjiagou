@@ -13,11 +13,13 @@
 </template>
 
 <script>
-import {
+import sddzUtils from '@sddz/utils'
+
+const {
+  isArray,
   cutStrByFullLength,
   getStrFullLength,
-} from '@sddz/utils/dist/string-util'
-
+} = sddzUtils;
 export default {
   name: 'SEllipsis',
   props: {
@@ -51,6 +53,7 @@ export default {
   },
   computed: {
     fullLength() {
+      console.log(isArray([]));
       const fullLength = getStrFullLength(this.str)
       console.log(this.str, fullLength)
       return fullLength
