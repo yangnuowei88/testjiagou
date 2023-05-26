@@ -1,0 +1,35 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["src"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "destination": "docs/",
+    "encoding": "utf8",
+    "verbose": true,
+    "recurse": true,
+    "readme": "README.md",
+    "template": "node_modules/clean-jsdoc-theme",
+    "theme_opts": {
+      "theme": "light",
+      "title": "时代地智 基础JS工具库",
+      "menu": [
+        {
+          "title": "gitcoffee 仓库",
+          "link": "http://192.168.52.18:13000/sddz-fe/framework.git",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

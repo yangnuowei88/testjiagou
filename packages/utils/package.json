@@ -1,47 +1,61 @@
 {
   "name": "@sddz/utils",
-  "version": "0.3.18",
+  "version": "0.0.1",
   "description": "工具函数",
   "keywords": [
     "utils"
   ],
-  "author": "giscafer <giscafer@outlook.com>",
-  "homepage": "https://github.com/giscafer/sinokit",
-  "license": "MIT",
-  "main": "dist/index.cjs.js",
-  "unpkg": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
-  "directories": {
-    "dist": "dist",
-    "src": "src",
-    "test": "__tests__"
-  },
+  "author": "yang",
   "files": [
-    "dist",
-    "src"
+    "dist/",
+    "src/",
+    "types/",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/giscafer/sinokit.git"
-  },
   "scripts": {
-    "test": "jest",
-    "clean": "rimraf ./dist",
-    "prebuild": "node ./build-entry.js",
-    "build": "npm run prebuild && npm run clean && rollup -c rollup.config.js"
+    "test:dev": "jest --watchAll=true --config=jest.config.js",
+    "build": "npm run clear && npm run compile && npm run jsdoc && npm run types",
+    "clear": "rm -rf types && rm -rf docs && rm -rf build",
+    "lint": "eslint  src --fix",
+    "prettier": "prettier src --write",
+    "test:all": "jest",
+    "jsdoc": "jsdoc -c jsdoc.conf.json",
+    "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
+    "compile": "webpack --mode production --config ./scripts/webpack.config.js",
+    "pub": "np --no-cleanup --any-branch"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "fecha": "^3.0.3"
   },
-  "gitHead": "e8d065d77641274fe22a6c4111a33893c9e622ab",
   "devDependencies": {
-    "rimraf": "^3.0.2",
-    "rollup": "^2.30.0",
-    "rollup-plugin-multi-input": "^1.1.1",
-    "uppercamelcase": "^3.0.0"
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.3.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "clean-jsdoc-theme": "^4.2.3",
+    "css-minify": "^2.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^29.4.1",
+    "jsdoc": "^4.0.0",
+    "np": "^7.6.3",
+    "prettier": "2.0.5",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.52.18:13000/sddz-fe/framework.git"
   }
 }
