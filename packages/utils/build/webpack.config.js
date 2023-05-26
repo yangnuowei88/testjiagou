@@ -6,8 +6,8 @@ module.exports = {
     optimization: { minimize: true },
     experiments: { outputModule: true },
     output: {
-        path: path.resolve('dist'),
-        filename: 'geoonlineutil.min.js',
+        path: path.resolve('lib'),
+        filename: 'sddz-utils.min.js',
         libraryTarget: 'module', // module/commonjs2/window // https://webpack.js.org/configuration/output/#outputlibrarytarget
     },
     module: {

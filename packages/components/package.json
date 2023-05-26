@@ -1,48 +1,39 @@
 {
   "name": "@sddz/components",
-  "version": "0.3.18",
-  "description": "组件",
+  "version": "0.0.1",
+  "description": "vue组件",
   "keywords": [
     "components"
   ],
-  "author": "giscafer <giscafer@outlook.com>",
-  "homepage": "https://giscafer.github.io/sinokit",
-  "license": "MIT",
-  "main": "lib/sinokit-components.common.js",
-  "unpkg": "lib/sinokit-components.common.js",
+  "author": "yang",
+  "main": "lib/sddz-components.esm.js",
   "directories": {
-    "dist": "dist",
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
-    "dist",
-    "lib"
+    "lib",
+    "src"
   ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/giscafer/sinokit.git"
   },
   "scripts": {
     "docs": "docsify serve ./docs",
     "build:file": "node build/bin/build-entry.js",
     "clean": "rimraf lib",
     "build": "npm run clean && npm run build:file && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
-    "lint": "eslint  lib/**/* build/**/* --quiet",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "lint": "eslint  lib/**/* build/**/* --quiet"
   },
   "dependencies": {
-    "@sddz/utils": "0.3.18",
+    "@sddz/utils": "0.0.1",
     "codemirror": "^5.56.0",
     "element-ui": "^2.13.2",
     "lodash": "^4.17.19",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@purtuga/esm-webpack-plugin": "^1.5.0",
     "babel": "^6.23.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.1.0",
@@ -60,5 +51,9 @@
     "webpack": "^4.44.0",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.52.18:13000/sddz-fe/framework.git"
   }
 }

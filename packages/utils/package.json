@@ -2,12 +2,15 @@
   "name": "@sddz/utils",
   "version": "0.0.1",
   "description": "工具函数",
+  "main": "lib/sddz-utils.min.js",
+  "module": "lib/sddz-utils.min.js",
+  "typings": "lib/types/index.d.ts",
   "keywords": [
     "utils"
   ],
   "author": "yang",
   "files": [
-    "dist/",
+    "lib/",
     "src/",
     "types/",
     "package.json",
@@ -26,8 +29,8 @@
     "prettier": "prettier src --write",
     "test:all": "jest",
     "jsdoc": "jsdoc -c jsdoc.conf.json",
-    "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
-    "compile": "webpack --mode production --config ./scripts/webpack.config.js",
+    "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir ./lib/types",
+    "compile": "webpack --mode production --config build/webpack.config.js",
     "pub": "np --no-cleanup --any-branch"
   },
   "dependencies": {

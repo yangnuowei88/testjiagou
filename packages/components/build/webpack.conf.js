@@ -2,6 +2,7 @@ const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const EsmWebpackPlugin = require("@purtuga/esm-webpack-plugin");
 
 const config = require('./config');
 
@@ -13,12 +14,11 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
-    filename: 'index.js',
+    filename: 'sddz-components.esm.js',
     chunkFilename: '[id].js',
-    libraryTarget: 'umd',
+    libraryTarget: 'var',
     libraryExport: 'default',
-    library: 'SINOKITCOMPONENTS',
-    umdNamedDefine: true
+    library: 'SDDZCOMPONENTS',
     // globalObject: "typeof self !== 'undefined' ? self : this"
   },
   resolve: {
@@ -83,5 +83,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new ProgressBarPlugin(), new VueLoaderPlugin()]
+  plugins: [new ProgressBarPlugin(), new VueLoaderPlugin(),new EsmWebpackPlugin()]
 };

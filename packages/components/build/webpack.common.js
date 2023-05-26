@@ -12,10 +12,10 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
-    filename: 'sinokit-components.common.js',
+    filename: 'sddz-components.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'SINOKITCOMPONENTS',
+    library: 'SDDZCOMPONENTS',
     libraryTarget: 'umd'
   },
   resolve: {
