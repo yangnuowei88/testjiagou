@@ -5,11 +5,11 @@ const isLib = process.env.VUE_APP_BUILD_MODE === 'lib';
 const resolve = dir => path.join(__dirname, dir);
 
 const setChainWebpack = config => {
-  config.resolve.alias.set('@', path.resolve('app'));
+  config.resolve.alias.set('@', path.resolve('src'));
   config.resolve.alias.set('@sddz', path.resolve('packages'));
   config.module
     .rule('js')
-    .include.add('/app')
+    .include.add('/src')
     .end()
     .use('babel')
     .loader('babel-loader');
@@ -54,7 +54,7 @@ module.exports = {
   publicPath: '/',
   pages: {
     index: {
-      entry: resolve('app/main.js')
+      entry: resolve('src/main.js')
     }
   },
   lintOnSave: true,
