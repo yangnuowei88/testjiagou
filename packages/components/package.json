@@ -19,11 +19,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "docs": "docsify serve ./docs",
-    "build:file": "node build/bin/build-entry.js",
     "clean": "rimraf lib",
     "build": "npm run clean && npm run build:file && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
     "build:test": "npm run clean && npm run build:file && webpack --config build/webpack.common.js",
+    "build:file": "node build/bin/build-entry.js",
+    "docs": "docsify serve ./docs",
     "lint": "eslint  lib/**/* build/**/* --quiet"
   },
   "dependencies": {
