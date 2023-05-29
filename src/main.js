@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import 'normalize.css';
 import '@/plugins/element-ui';
-import '@/plugins/sinokit-components';
+import '@/plugins/sddz-components';
 import JsonSchemaEditor from 'vue-json-schema-editor-visual';
 import App from './App.vue';
 import router from './router';

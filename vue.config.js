@@ -44,7 +44,7 @@ const setConfigureWebpack = config => {
     config.externals = externals;
     config.output = {
       ...config.output,
-      library: 'SinoKit',
+      library: 'SDDZ',
       libraryExport: 'default'
     };
   }

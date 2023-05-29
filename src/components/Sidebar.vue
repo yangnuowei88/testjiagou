@@ -1,13 +1,13 @@
 <template>
   <div class="ve-sidebar">
     <a class="logo" href>
-      <img src="../assets/img/vue.svg" alt="logo" />
+      <img src="../assets/img/vue.png" alt="logo" />
     </a>
-    <div class="site-descrpition">SinoKit</div>
+    <div class="site-descrpition">时代地智组件库</div>
     <div class="sidebar-section">
       <section>
         <div class="sidebar-title">
-          <span>组件示例</span>
+          <span>组件测试</span>
         </div>
         <div class="sidebar-content">
           <ul>
