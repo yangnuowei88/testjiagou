@@ -215,7 +215,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__12__;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=ee26ecda&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=4d509e8a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c
@@ -240,7 +240,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=ee26ecda&
+// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=4d509e8a&
 
 // EXTERNAL MODULE: external "@sddz/utils"
 var utils_ = __webpack_require__(12);
@@ -249,6 +249,7 @@ var utils_default = /*#__PURE__*/__webpack_require__.n(utils_);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=script&lang=js&
 
 const {
+  isArray,
   cutStrByFullLength,
   getStrFullLength
 } = utils_default.a;
@@ -285,6 +286,7 @@ const {
   },
   computed: {
     fullLength() {
+      console.log(isArray([]));
       const fullLength = getStrFullLength(this.str);
       console.log(this.str, fullLength);
       return fullLength;

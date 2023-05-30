@@ -1,6 +1,6 @@
 {
   "name": "@sddz/utils",
-  "version": "0.0.1",
+  "version": "0.3.19",
   "description": "工具函数",
   "main": "lib/sddz-utils.min.js",
   "module": "lib/sddz-utils.min.js",
@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test:dev": "jest --watchAll=true --config=jest.config.js",
-    "build": "npm run clear && npm run compile && npm run jsdoc && npm run types",
+    "build：nodoc": "npm run clear && npm run compile && npm run jsdoc && npm run types",
+    "build": "npm run clear && npm run compile",
     "clear": "rm -rf types && rm -rf docs && rm -rf lib",
     "lint": "eslint  src --fix",
     "prettier": "prettier src --write",

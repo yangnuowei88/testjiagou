@@ -1,6 +1,6 @@
 {
   "name": "sddz-cli",
-  "version": "0.0.1",
+  "version": "0.3.19",
   "description": "前端项目脚手架cli",
   "author": "yang",
   "license": "ISC",
@@ -24,7 +24,6 @@
     "validate-npm-package-name": "^3.0.0",
     "which": "^1.3.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

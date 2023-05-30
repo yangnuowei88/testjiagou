@@ -13381,8 +13381,8 @@ var result_component = Object(componentNormalizer["a" /* default */])(
 // CONCATENATED MODULE: ./src/result/index.js
 
 /* harmony default export */ var src_result = (result);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=ee26ecda&
-var ellipsisvue_type_template_id_ee26ecda_render = function render() {
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=template&id=4d509e8a&
+var ellipsisvue_type_template_id_4d509e8a_render = function render() {
   var _vm = this,
     _c = _vm._self._c
   return _c(
@@ -13402,11 +13402,11 @@ var ellipsisvue_type_template_id_ee26ecda_render = function render() {
     1
   )
 }
-var ellipsisvue_type_template_id_ee26ecda_staticRenderFns = []
-ellipsisvue_type_template_id_ee26ecda_render._withStripped = true
+var ellipsisvue_type_template_id_4d509e8a_staticRenderFns = []
+ellipsisvue_type_template_id_4d509e8a_render._withStripped = true
 
 
-// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=ee26ecda&
+// CONCATENATED MODULE: ./src/ellipsis/src/ellipsis.vue?vue&type=template&id=4d509e8a&
 
 // EXTERNAL MODULE: external "@sddz/utils"
 var utils_ = __webpack_require__(13);
@@ -13415,6 +13415,7 @@ var utils_default = /*#__PURE__*/__webpack_require__.n(utils_);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/ellipsis/src/ellipsis.vue?vue&type=script&lang=js&
 
 const {
+  isArray,
   cutStrByFullLength,
   getStrFullLength
 } = utils_default.a;
@@ -13451,6 +13452,7 @@ const {
   },
   computed: {
     fullLength() {
+      console.log(isArray([]));
       const fullLength = getStrFullLength(this.str);
       console.log(this.str, fullLength);
       return fullLength;
@@ -13478,8 +13480,8 @@ const {
 
 var ellipsis_component = Object(componentNormalizer["a" /* default */])(
   src_ellipsisvue_type_script_lang_js_,
-  ellipsisvue_type_template_id_ee26ecda_render,
-  ellipsisvue_type_template_id_ee26ecda_staticRenderFns,
+  ellipsisvue_type_template_id_4d509e8a_render,
+  ellipsisvue_type_template_id_4d509e8a_staticRenderFns,
   false,
   null,
   null,
