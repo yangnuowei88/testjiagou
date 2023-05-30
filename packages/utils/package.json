@@ -1,6 +1,6 @@
 {
   "name": "@sddz/utils",
-  "version": "0.3.19",
+  "version": "0.3.20",
   "description": "工具函数",
   "main": "lib/sddz-utils.min.js",
   "module": "lib/sddz-utils.min.js",

@@ -1,6 +1,6 @@
 {
   "name": "@sddz/components",
-  "version": "0.3.19",
+  "version": "0.3.20",
   "description": "vue组件",
   "keywords": [
     "components"
@@ -27,7 +27,7 @@
     "lint": "eslint  lib/**/* build/**/* --quiet"
   },
   "dependencies": {
-    "@sddz/utils": "0.3.19",
+    "@sddz/utils": "0.3.20",
     "codemirror": "^5.56.0",
     "element-ui": "^2.13.2",
     "lodash": "^4.17.19",
