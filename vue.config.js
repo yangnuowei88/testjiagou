@@ -65,7 +65,7 @@ module.exports = {
     extract: false
   },
   devServer: {
-    port: 6066,
+    port: 8848,
     open: true,
     overlay: {
       warnings: true,
