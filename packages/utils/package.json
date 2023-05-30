@@ -17,10 +17,6 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "test:dev": "jest --watchAll=true --config=jest.config.js",
     "build：nodoc": "npm run clear && npm run compile && npm run jsdoc && npm run types",
@@ -61,5 +57,6 @@
   "repository": {
     "type": "git",
     "url": "http://192.168.52.18:13000/sddz-fe/framework.git"
-  }
+  },
+  "gitHead": "760b20221c52b7d336d9ff94e42b81d0979d51b5"
 }

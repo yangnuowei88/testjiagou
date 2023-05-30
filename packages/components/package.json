@@ -14,10 +14,6 @@
     "lib",
     "src"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "clean": "rimraf lib",
     "build": "npm run clean && npm run build:file && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
@@ -56,5 +52,6 @@
   "repository": {
     "type": "git",
     "url": "http://192.168.52.18:13000/sddz-fe/framework.git"
-  }
+  },
+  "gitHead": "760b20221c52b7d336d9ff94e42b81d0979d51b5"
 }

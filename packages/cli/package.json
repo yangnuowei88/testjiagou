@@ -30,5 +30,6 @@
   "repository": {
     "type": "git",
     "url": "http://192.168.52.18:13000/sddz-fe/framework.git"
-  }
+  },
+  "gitHead": "760b20221c52b7d336d9ff94e42b81d0979d51b5"
 }
