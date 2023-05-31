@@ -16,7 +16,6 @@
 import sddzUtils from '@sddz/utils'
 
 const {
-  isArray,
   cutStrByFullLength,
   getStrFullLength,
 } = sddzUtils;
@@ -53,7 +52,6 @@ export default {
   },
   computed: {
     fullLength() {
-      console.log(isArray([]));
       const fullLength = getStrFullLength(this.str)
       console.log(this.str, fullLength)
       return fullLength

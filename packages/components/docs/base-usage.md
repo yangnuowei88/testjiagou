@@ -2,7 +2,7 @@
 
 ## 通过 npm 安装
 
-我们提供了 `@sddz/包名` npm 包，通过下面命令即可完成安装，`SinoKit` 依赖于 `element` 与 `vue`，所以不要忘记安装依赖包。
+我们提供了 `@sddz/包名` npm 包，通过下面命令即可完成安装，`sddz` 依赖于 `element` 与 `vue`，所以不要忘记安装依赖包。
 
 ```bash
 npm i @sddz/components -S
@@ -16,9 +16,9 @@ npm i @sddz/components -S
 
 ```js
 import Vue from 'vue';
-import SinoKitComponents from '@sddz/components';
+import sddzComponents from '@sddz/components';
 
-Vue.use(SinoKitComponents);
+Vue.use(sddzComponents);
 ```
 
 按需引入 `@sddz/components`
@@ -38,7 +38,7 @@ Vue.component('JsonEditor', JsonEditor);
 npm i @sddz/cli -g
 ```
 
-使用 `sino create` 命令从模板创建工程
+使用 `sino new` 命令从模板创建工程
 
 ```bash
 sino create vue-demo

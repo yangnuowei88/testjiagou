@@ -5,7 +5,6 @@
   - [介绍](base-quickstart.md)
   - [开始使用](base-usage.md)
   - [更新日志](change-log.md)
-  - [最佳实践](best-practise.md)
 
 - 组件
 
@@ -34,4 +33,4 @@
 * 工程模板
 
   - [后台管理](./admin-template.md)
-  - [前台网站](./front-template.md)
+  - [H5模板](./front-template.md)

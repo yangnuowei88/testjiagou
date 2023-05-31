@@ -38,7 +38,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.3.20',
+  version: '0.3.25',
   install,
   JsonEditor,
   OverviewTimeline,

@@ -2,6 +2,5 @@
 
 ## 模板列表
 
-- [vue-element-admin-template](https://github.com/giscafer/vue-element-admin-template) 基于 vue-element-admin 简化版的模板
+- [PC模板](http://192.168.52.18:13000/zhushuai/web-tg-bs) 基于 vue2
 
-- 更多……

@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>SinoKit - Components for Vue.js 2.x.</title>
+    <title>sddz - Components for Vue.js 2.x.</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta
       name="description"
-      content="Vue.js 组件库、基础组件、业务组件、区块、模板."
+      content="基础工具库，Vue.js 组件库、基础组件、业务组件、区块、模板，脚手架"
     />
     <meta
       name="viewport"
@@ -41,34 +41,41 @@
       src="https://unpkg.com/@sddz/utils@latest/dist/index.js"
       type="module"
     ></script> -->
+<!--    <script
+      src="https://unpkg.com/@sddz/components@latest/lib/sddz-components.common.js"
+      type="module"
+    ></script>-->
     <script
-      src="https://unpkg.com/@sddz/components@latest/lib/sinokit-components.common.js"
+      src="./sddz-utils.min.js"
+      type="module"
+    ></script>
+    <script
+      src="./sddz-components.common.js"
       type="module"
     ></script>
     <script src="https://unpkg.com/docsify-demo-codesandbox-vue/dist/docsify-demo-codesandbox-vue.min.js"></script>
 
     <script>
-      // console.log(SINOKITCOMPONENTS.version);
+      // console.log(sddzCOMPONENTS.version);
       let boxBootCode = `
       import ElementUI from 'element-ui'
       import 'element-ui/lib/theme-chalk/index.css'
-      import SinokitComponents from '@sddz/components'
+      import sddzComponents from '@sddz/components'
       Vue.use(ElementUI, { size: 'small' })
-      Vue.use(SinokitComponents)
+      Vue.use(sddzComponents)
       `;
       // custom dependencies
       let boxDependencies = {
         'element-ui': '^2.13.2',
         '@sddz/components':
-          (window.SINOKITCOMPONENTS && window.SINOKITCOMPONENTS.version) ||
+          (window.SDDZCOMPONENTS && window.SDDZCOMPONENTS.version) ||
           'latest'
       };
 
       window.$docsify = {
-        name: 'sinokit',
-        repo: 'giscafer/sinokit', // connect to github
+        name: 'sddz',
         loadSidebar: '_sidebar.md',
-        coverpage: true,
+        coverpage: false,
         themeColor: '#3c78eb',
         homepage: 'base-quickstart.md',
         search: {
@@ -96,7 +103,7 @@
           let div = document.createElement('div');
           div.setAttribute('class', 'logo');
           let a = document.createElement('a');
-          a.setAttribute('href', 'https://github.com/giscafer/sinokit');
+          a.setAttribute('href', 'http://192.168.52.18:13000/sddz-fe/framework');
 
           clearInterval(interval);
         }
@@ -116,16 +123,6 @@
       }
     </script>
 
-    <!--    <script
-      src="https://unpkg.com/@sddz/components@latest/lib/1.js"
-      type="module"
-    ></script>
-    <script
-      src="https://unpkg.com/@sddz/components@latest/lib/3.js"
-      type="module"
-    ></script> -->
-    <!-- <script src="./libs/babel.min.js"></script> -->
-    <!-- <script src="./libs/search.min.js"></script> -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
