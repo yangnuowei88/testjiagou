@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">64.1% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>90/117</span>
+                <span class='fraction'>75/117</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/3</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">64.1% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>90/117</span>
+                <span class='fraction'>75/117</span>
             </div>
         
             
@@ -228,21 +228,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -344,22 +344,22 @@ export <span class="fstat-no" title="function not covered" >function isArrayLike
  * @param {Object} obj
  * @return {String}
  */
-export function typeOf(obj) {
-    const toString = Object.prototype.toString;
-    const map = {
-        '[object Boolean]': 'boolean',
-        '[object Number]': 'number',
-        '[object String]': 'string',
-        '[object Function]': 'function',
-        '[object Array]': 'array',
-        '[object Date]': 'date',
-        '[object RegExp]': 'regExp',
-        '[object Undefined]': 'undefined',
-        '[object Null]': 'null',
-        '[object Object]': 'object',
-    };
-    return map[toString.call(obj)];
-}
+export <span class="fstat-no" title="function not covered" >function typeOf(obj) {</span>
+<span class="cstat-no" title="statement not covered" >    const toString = Object.prototype.toString;</span>
+<span class="cstat-no" title="statement not covered" >    const map = {</span>
+<span class="cstat-no" title="statement not covered" >        '[object Boolean]': 'boolean',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Number]': 'number',</span>
+<span class="cstat-no" title="statement not covered" >        '[object String]': 'string',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Function]': 'function',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Array]': 'array',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Date]': 'date',</span>
+<span class="cstat-no" title="statement not covered" >        '[object RegExp]': 'regExp',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Undefined]': 'undefined',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Null]': 'null',</span>
+<span class="cstat-no" title="statement not covered" >        '[object Object]': 'object',</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" >    return map[toString.call(obj)];</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
 /**
  * @description 是否为整数
@@ -421,7 +421,7 @@ export <span class="fstat-no" title="function not covered" >function isEmptyArrO
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-26T06:38:54.756Z
+                at 2023-05-31T03:18:56.145Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

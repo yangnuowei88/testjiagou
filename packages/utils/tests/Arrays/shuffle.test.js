@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../../src/index.js';
-const { shuffle } = geoStarUtil;
+import  sddzUtil  from '../../src/index.js';
+const { shuffle } = sddzUtil;
 
 describe('Arrays/shuffle.js', () => {
     it('should not change the original array if the `mutateOriginal` parm is false', () => {

@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../src/index.js';
-const { reverseString } = geoStarUtil;
+import  sddzUtil  from '../src/index.js';
+const { reverseString } = sddzUtil;
 
 describe('reverseString.js', () => {
     it('should return the same string but reversed', () => {

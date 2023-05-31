@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../../src/index.js';
-const { range } = geoStarUtil;
+import  sddzUtil  from '../../src/index.js';
+const { range } = sddzUtil;
 
 describe('Maths/range.js', () => {
     it('should return an array of numbers between the given start and end values with the given step', () => {

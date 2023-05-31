@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../src/index.js';
-const { deepClone } = geoStarUtil;
+import  sddzUtil  from '../src/index.js';
+const { deepClone } = sddzUtil;
 describe('deepClone.js', () => {
     it('should return a new object with the same properties', () => {
         expect(deepClone({})).toEqual({});

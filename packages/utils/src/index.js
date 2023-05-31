@@ -3,7 +3,6 @@ import * as Date from './Date';
 import * as Dom from './Dom';
 import * as Easing from './Easing';
 import * as File from './File';
-//import * as Geo from './Geo';
 import * as Math from './Math';
 import * as Random from './Random';
 /*import * as Regular from './Regular';*/

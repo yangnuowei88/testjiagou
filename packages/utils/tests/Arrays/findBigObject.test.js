@@ -1,5 +1,5 @@
-import  geoStarUtil from '../../src/index.js';
-const { findBigObject } = geoStarUtil;
+import  sddzUtil from '../../src/index.js';
+const { findBigObject } = sddzUtil;
 
 describe('Arrays/findBigObject.js', () => {
     describe('findBigObject', () => {

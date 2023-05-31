@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../../src/index.js';
-const { findLowObject } = geoStarUtil;
+import  sddzUtil  from '../../src/index.js';
+const { findLowObject } = sddzUtil;
 
 describe('Arrays/findLowObject.js', () => {
     const mockArray = [

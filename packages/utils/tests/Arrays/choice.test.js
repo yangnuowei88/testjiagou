@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../../src/index.js';
-const { choice } = geoStarUtil;
+import  sddzUtil  from '../../src/index.js';
+const { choice } = sddzUtil;
 
 describe('Arrays/choice.js', () => {
     beforeEach(() => {

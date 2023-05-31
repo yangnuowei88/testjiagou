@@ -1,5 +1,5 @@
-import  geoStarUtil  from '../../src/index.js';
-const { mode } = geoStarUtil;
+import  sddzUtil  from '../../src/index.js';
+const { mode } = sddzUtil;
 
 describe('Maths/mode.js', () => {
     it('returns the most repeated number', () => {
