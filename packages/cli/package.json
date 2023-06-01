@@ -1,5 +1,5 @@
 {
-  "name": "sddz-cli",
+  "name": "@sddz/sddz-cli",
   "version": "0.3.25",
   "description": "前端项目脚手架cli",
   "author": "yang",

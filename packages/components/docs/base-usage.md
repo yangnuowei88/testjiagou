@@ -32,18 +32,16 @@ Vue.component('JsonEditor', JsonEditor);
 
 ## @sddz/cli
 
-安装工具，即可全局使用 `sino` 命令
+安装工具，即可全局使用 `sddz` 命令
 
 ```
 npm i @sddz/cli -g
 ```
 
-使用 `sino new` 命令从模板创建工程
+使用 `sddz new` 命令从模板创建工程
 
 ```bash
-sino create vue-demo
-cd vue-demo
-npm run dev
+sddz new //按照提示创建项目
 ```
 
 > 更多功能开发中…
@@ -59,16 +57,11 @@ npm i @sddz/utils -S
 vue 相关函数使用
 
 ```js
-import CustomEventPlugin from '@sddz/utils/dist/vue/event';
+import sddzUtils from ' @sddz/utils';
+
+console.log( sddzUtils.reverseString('abc'));
 ```
 
-string 相关函数使用
 
-```js
-import { getStrFullLength } from '@sddz/utils/dist/string-util';
-
-const fullLength = getStrFullLength('演示如何使用utils工具函数');
-console.log(fullLength);
-```
 
 > 持续迭代更新……
