@@ -4,11 +4,11 @@
   ],
   "command": {
     "publish": {
-      "message": "chore(release): publish %s"
+      "message": "chore(release): sddz publish %s"
     },
     "create": {
       "homepage": "http://192.168.52.18:13000/sddz-fe/framework.git"
     }
   },
-  "version": "0.3.25"
+  "version": "0.1.0"
 }

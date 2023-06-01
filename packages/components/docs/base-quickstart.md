@@ -1,7 +1,12 @@
 # SDDZ-时代地智前端基础架构平台
 
 `SDDZ` 是基于 `Vue2.x` 与 `ElementUI` 构建封装的解决方案库，通过提供 **功能组件**、**区块**、**页面模板**，用以解决频繁开发业务组件的情况，目的是提效降本。
-
+## 私有npm源
+[npm源地址](http://192.168.52.18:13000/sddz-fe/framework.git)
+请确保设置私有源指向
+```sh
+ yarn config set registry http://xxx.com
+```
 ## 模块
 
 `SDDZ` 有以下几种模块：

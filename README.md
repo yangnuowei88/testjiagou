@@ -1,12 +1,11 @@
-
-
 # sddz
 
 - 基础工具包，
 - Vue.js 2.x 组件库、基础组件、业务组件、区块、模板
 - 脚手架工具
-
-组件文档：http://xxx.com
+工具库文档：http://xxx.com
+脚手架文档：http://xxx.com
+npm私有仓库：http://xxx.com
 
 ## 运行须知
 
